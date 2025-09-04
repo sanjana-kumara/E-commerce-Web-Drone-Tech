@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Drone Tech - Sign Up</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="stylesheet" href="assets/css/signup.css">
+    </head>
+
+    <body class="min-h-screen flex items-center justify-center px-4 text-gray-700 font-sans bg-gray-100">
+
+        <div class="w-full max-w-5xl bg-white/85 backdrop-blur-md rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden animate-slide-up">
+
+            <!-- Left Side Image -->
+            <div class="hidden md:flex md:w-1/2 items-center justify-center bg-gray-200">
+                <img src="assets/img/about/about1.jpg" alt="Sign Up" class="w-full h-full object-cover" />
+            </div>
+
+            <!-- Right Side Form -->
+            <div class="w-full md:w-1/2 p-8">
+                <div class="flex flex-col items-center mb-6">
+                    <i class="fas fa-user-plus text-green-600 text-4xl mb-2"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Create Your Account</h2>
+                    <p class="text-gray-500 text-sm text-center">Join our Drone Tech marketplace today</p>
+                </div>
+
+                <div id="message" class="hidden text-center text-sm mt-4 p-2 rounded-lg"></div>
+
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium">First Name</label>
+                        <input id="firstName" type="text" placeholder="Enter Your First Name" required
+                               class="w-full mt-1 px-4 py-2 bg-white border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium">Last Name</label>
+                        <input id="lastName" type="text" placeholder="Enter Your Last Name" required
+                               class="w-full mt-1 px-4 py-2 bg-white border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium">Email</label>
+                        <input id="email" type="email" placeholder="Enter Your Email Address" required
+                               class="w-full mt-1 px-4 py-2 bg-white border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500" />
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium">Password</label>
+                        <div class="relative">
+                            <input id="password" type="password" placeholder="********" required
+                                   class="w-full mt-1 px-4 py-2 bg-white border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 pr-10" />
+                            <span onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-3 flex items-center cursor-pointer text-gray-500 hover:text-green-600">
+                                <i id="eye-icon" class="fas fa-eye-slash"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="SignUp();"
+                            class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-all duration-300">Sign
+                        Up</button>
+                </form>
+
+                <p class="text-sm text-center text-gray-600 mt-4">
+                    Already have an account?
+                    <a href="signin.html" class="text-green-600 hover:underline">Sign In</a>
+                </p>
+
+            </div>
+        </div>
+
+        <script src="assets/js/signup.js"></script>
+
+    </body>
+</html>

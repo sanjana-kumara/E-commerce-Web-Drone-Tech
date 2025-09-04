@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Admin | Top Selling Products</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <style>
+            /* Custom fade-in animation */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(10px);
+                transition: opacity 0.4s ease, transform 0.4s ease;
+            }
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+    <body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex items-center justify-center p-6">
+
+        <button 
+            onclick="location.href = 'admin-product-management.html'" 
+            class="absolute top-6 left-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow"
+            >
+            &larr; Back to Admin Panel
+        </button>
+        <main class="bg-white rounded-lg shadow-lg p-6 w-full max-w-4xl fade-in">
+            <header class="mb-10 text-center">
+                <h1 class="text-4xl font-extrabold text-blue-700">Top Selling Products Dashboard</h1>
+                <p class="text-gray-600 mt-2">Overview of your best selling products</p>
+            </header>
+
+
+
+            <section>
+                <h2 class="text-2xl font-semibold mb-6 text-center">Top 5 Best Selling Products</h2>
+
+                <div class="flex flex-col md:flex-row md:space-x-10 items-center">
+
+                    <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                        <canvas id="myPolarChart" width="400" height="400"></canvas>
+                    </div>
+
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-xl font-semibold mb-4">Product Sales Details</h3>
+                        <ul id="productList" class="space-y-3 text-gray-700"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+<!--        <script>
+            // Sample data
+            const products = [
+                {id: 1, title: "Red Widget", qty: 11, color: "rgb(255, 99, 132)"},
+                {id: 2, title: "Green Gadget", qty: 16, color: "rgb(75, 192, 192)"},
+                {id: 3, title: "Yellow Thing", qty: 7, color: "rgb(255, 205, 86)"},
+                {id: 4, title: "Grey Gizmo", qty: 3, color: "rgb(201, 203, 207)"},
+                {id: 5, title: "Blue Device", qty: 14, color: "rgb(54, 162, 235)"}
+            ];
+
+            // Prepare chart data
+            const data = {
+                labels: products.map(p => p.title),
+                datasets: [{
+                        label: 'Quantity Sold',
+                        data: products.map(p => p.qty),
+                        backgroundColor: products.map(p => p.color)
+                    }]
+            };
+
+            const config = {
+                type: 'polarArea',
+                data: data,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {position: 'right'},
+                        title: {
+                            display: true,
+                            text: 'Top 5 Best Selling Products'
+                        }
+                    }
+                },
+            };
+
+            // Render chart
+            const ctx = document.getElementById('myPolarChart').getContext('2d');
+            const myPolarChart = new Chart(ctx, config);
+
+            // Populate product list
+            const productList = document.getElementById('productList');
+            products.forEach(p => {
+                const li = document.createElement('li');
+                li.className = "border-l-4 border-blue-600 bg-blue-50 p-3 rounded shadow-sm flex justify-between items-center";
+                li.innerHTML = `
+              <span>${p.title}</span>
+              <span class="font-semibold text-blue-800">Sold: ${p.qty}</span>
+            `;
+                productList.appendChild(li);
+            });
+
+            // Fade-in effect
+            window.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+            });
+        </script>-->
+
+        <script src="assets/js/report.js"></script>
+        
+    </body>
+</html>

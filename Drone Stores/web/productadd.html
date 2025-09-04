@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Drone Tech - Add Product</title>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+
+        <!-- CSS 
+        ========================= -->
+
+
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+        <link rel="stylesheet" href="assets/css/notification.css">
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    </head>
+
+    <body onload="loadInitialData();">
+
+        <!--header area start-->
+        <!--Offcanvas menu area start-->
+        <div class="off_canvars_overlay">
+
+        </div>
+        <div class="Offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+
+                            <div class="middel_right_info">
+                                <a class="text-white fw-bold" onclick="signOut();"> Log Out</a>
+                            </div>
+                            <div id="menu" class="text-left ">
+                                <ul class="offcanvas_main_menu">
+                                    <li class="menu-item-has-children active">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="productview.html">product</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="my-account.html">my account</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="cart.html">Cart</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="orderhistory.html">Orders</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="checkout.html">Check Out</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="contact.html"> Contact Us </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Offcanvas menu area end-->
+
+        <header>
+            <div class="main_header">
+                <!--header top start-->
+                <div class="header_top" id="mainheader"></div>
+                <!--header top start-->
+                <!--header middel start-->
+                <div class="header_middle" id="middleheader"></div>
+                <!--header middel end-->
+                <!--header bottom satrt-->
+                <div class="main_menu_area" id="bottomheader"></div>
+                <!--header bottom end-->
+            </div>
+        </header>
+        <!--header area end-->
+
+
+        <!--breadcrumbs area start-->
+        <div class="breadcrumbs_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb_content">
+                            <ul>
+                                <li><a href="index.html">home</a></li>
+                                <li>Product Adding </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--breadcrumbs area end-->
+
+        <div class="w-full max-w-4xl bg-white p-8 rounded-xl shadow-md ">
+
+            <h2 class="text-2xl font-bold mb-6 text-center text-blue-700">Add New Product</h2>
+
+            <form  id="product-form" action="add-drone-process.php" method="POST" enctype="multipart/form-data" class="space-y-5">
+
+                <!-- Drone Name -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Drone Name</label>
+                    <input id="p-name" type="text" name="name" required
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <!-- Category -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Category</label>
+                    <select id="p-category" name="category_id" required
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="0">-- Select Category --</option>
+
+                    </select>
+                </div>
+
+                <!-- Brand -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Brand</label>
+                    <select id="p-brand" name="brand" required
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="0">-- Select Brand --</option>
+
+                    </select>
+                </div>
+
+                <!-- Model -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Model</label>
+                    <select id="p-model" name="model" required
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="0">-- Select Model --</option>
+
+                    </select>
+                </div>
+
+                <!-- Color -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Color</label>
+                    <select id="p-color" name="color" required
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="0">-- Select Color --</option>
+
+                    </select>
+                </div>
+
+                <!-- Price -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Price (LKR)</label>
+                    <input id="p-price" type="number" name="price" step="0.01" required
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <!-- Stock Quantity -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Stock Quantity</label>
+                    <input id="p-qty" type="number" name="stock_quantity" required
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <!-- Flight Time -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Flight Time</label>
+                    <input id="p-f-time" type="text" name="flight_time" placeholder="e.g., 30 minutes"
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <!-- Range -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Range (KM)</label>
+                    <input id="p-range" type="text" name="range_km" placeholder="e.g., 10 KM"
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <!-- Warranty -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Warranty</label>
+                    <input id="p-warranty" type="text" name="warranty" placeholder="e.g., 6 Months"
+                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <!-- Features -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Features</label>
+                    <textarea id="p-feature" name="features" rows="3" placeholder="e.g., GPS, Obstacle Avoidance, Return to Home..."
+                              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Description -->
+                <div>
+                    <label class="block text-sm font-medium mb-1">Description</label>
+                    <textarea id="p-description" name="description" rows="4"
+                              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Multiple Images Upload -->
+                <div>
+                    <label class="block text-sm font-medium mb-2">Upload Images (Max 3)</label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+                        <!-- Image 1 -->
+                        <div>
+                            <input id="image1" type="file" name="images[]" accept="image/*" onchange="previewImage(this, 'preview1')"
+                                   required
+                                   class="w-full px-3 py-2 border rounded-lg file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-blue-600 file:text-white file:rounded-md hover:file:bg-blue-700" />
+                            <div id="preview1" class="mt-2"></div>
+                        </div>
+
+                        <!-- Image 2 -->
+                        <div>
+                            <input id="image2" type="file" name="images[]" accept="image/*" onchange="previewImage(this, 'preview2')"
+                                   required
+                                   class="w-full px-3 py-2 border rounded-lg file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-blue-600 file:text-white file:rounded-md hover:file:bg-blue-700" />
+                            <div id="preview2" class="mt-2"></div>
+                        </div>
+
+                        <!-- Image 3 -->
+                        <div>
+                            <input id="image3" type="file" name="images[]" accept="image/*" onchange="previewImage(this, 'preview3')"
+                                   required
+                                   class="w-full px-3 py-2 border rounded-lg file:mr-4 file:py-2 file:px-4 file:border-0 file:bg-blue-600 file:text-white file:rounded-md hover:file:bg-blue-700" />
+                            <div id="preview3" class="mt-2"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center pt-2">
+                    <button onclick="addToProduct();" type="button"
+                            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all">Add
+                        Product</button>
+                </div>
+
+            </form>
+        </div>
+
+        <!--footer area start-->
+        <div id="footer"></div>
+        <!--footer area end-->
+
+        <!-- JS
+    ============================================ -->
+
+        <!-- Plugins JS -->
+        <script src="assets/js/plugins.js"></script>
+
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+
+        <!--header Js-->
+        <script src="assets/js/header.js"></script>
+
+        <!--Product js-->
+        <script src="assets/js/add-product.js"></script>
+
+        <script src="assets/js/notification.js"></script>
+
+        <!-- JS for Preview -->
+        <script>
+                        
+                        function previewImage(input, previewId) {
+                            const previewDiv = document.getElementById(previewId);
+                            previewDiv.innerHTML = ''; // Clear previous
+                            if (input.files && input.files[0]) {
+                                const reader = new FileReader();
+                                reader.onload = function (e) {
+                                    const img = document.createElement("img");
+                                    img.src = e.target.result;
+                                    img.className = "mt-2 w-32 h-32 object-cover rounded border";
+                                    previewDiv.appendChild(img);
+                                };
+                                reader.readAsDataURL(input.files[0]);
+                            }
+                        }
+                        
+        </script>
+
+    </body>
+
+</html>

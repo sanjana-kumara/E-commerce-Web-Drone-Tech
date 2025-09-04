@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Dron Tech - Admin - Product Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png" />
+
+        <style>
+            .animate-fade-in {
+                animation: fadeIn 0.6s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+
+        <!-- Optional: If you're using custom styles -->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <link rel="stylesheet" href="assets/css/notification.css"/>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body class="bg-gray-50 font-sans" onload="loadsProduct();">
+
+        <!-- Offcanvas Menu Area -->
+        <div class="Offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+                            <div class="middel_right_info">
+                                <button class="text-white fw-bold" onclick="location.href = 'admin-user-management.html'">
+                                    <h4>User Management</h4>
+                                </button>
+                            </div>
+                            <div class="middel_right_info">
+                                <button class="text-white fw-bold" onclick="location.href = 'admin-product-management.html'">
+                                    <h4>Product Management</h4>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <div class="main_header">
+                <div class="header_top" id="mainheader"></div>
+                <div class="header_middle" id="middleheader"></div>
+                <div class="main_menu_area" id="bottomheader"></div>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <div class="max-w-6xl mx-auto bg-white p-6 rounded-xl shadow-md animate-fade-in mt-5 mb-5">
+            <h2 class="text-2xl font-bold mb-6">Review Seller Products</h2>
+
+            <div class="overflow-auto w-full">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 text-left text-sm font-medium bg-[#665DDE] text-white ">Image</th>
+                            <th class="px-4 py-2 text-left text-sm font-medium bg-[#665DDE] text-white">Product Name</th>
+                            <th class="px-4 py-2 text-left text-sm font-medium bg-[#665DDE] text-white">Seller Name</th>
+                            <th class="px-4 py-2 text-left text-sm font-medium bg-[#665DDE] text-white">Quantity</th>
+                            <th class="px-4 py-2 text-left text-sm font-medium bg-[#665DDE] text-white">Total</th>
+                            <th class="px-4 py-2 text-left text-sm font-medium bg-[#665DDE] text-white">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <!--                        <tr>
+                                                    <td class="px-4 py-2"><img src="assets/img/s-product/product.jpg" class="w-16 h-16 rounded"
+                                                                               alt="Product 1"></td>
+                                                    <td class="px-4 py-2">Handbag fringilla</td>
+                                                    <td class="px-4 py-2">saman kumara</td>
+                                                    <td class="px-4 py-2"><input min="1" max="100" value="1" type="number"
+                                                                                 class="border px-2 py-1 rounded w-20" /></td>
+                                                    <td class="px-4 py-2">$130.00</td>
+                                                    <td class="px-4 py-2">
+                                                        <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0">
+                                                            <button
+                                                                class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">View Details</button>
+                                                            <a href="addmin-Product-deatils.html" target="target">
+                                                                <button 
+                                                                    class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Approve</button>
+                                                            </a>
+                                                            <button
+                                                                class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                        
+                                                <tr>
+                                                    <td class="px-4 py-2"><img src="assets/img/s-product/product2.jpg" class="w-16 h-16 rounded"
+                                                                               alt="Product 2"></td>
+                                                    <td class="px-4 py-2">Handbags justo</td>
+                                                    <td class="px-4 py-2">kapila gunarathna</td>
+                                                    <td class="px-4 py-2"><input min="1" max="100" value="1" type="number"
+                                                                                 class="border px-2 py-1 rounded w-20" /></td>
+                                                    <td class="px-4 py-2">$180.00</td>
+                                                    <td class="px-4 py-2">
+                                                        <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0">
+                                                            <button
+                                                                class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">View Details</button>
+                                                            <button
+                                                                class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Approve</button>
+                                                            <button
+                                                                class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Reject</button>
+                                                        </div>
+                                                    </td>
+                                                </tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Active Products Management Section -->
+        <div class="max-w-6xl mt-5 mb-5 mx-auto bg-white p-6 rounded-xl shadow-md animate-fade-in">
+            <h2 class="text-2xl font-bold mb-6">Manage Active Products</h2>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="table_desc">
+                        <div class="cart_page table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="product_thumb">Image</th>
+                                        <th class="product_name">Product Name</th>
+                                        <th class="product-price">Price</th>
+                                        <th class="product_quantity">Stock</th>
+                                        <th class="product_quantity">Status</th>
+                                        <th class="product_total">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="product-table-body">
+                                    <tr>
+                                        <td class="product_thumb">
+                                            <img src="assets/img/products/drill1.jpg" alt="Drill Machine" style="width: 50px; height: 50px;">
+                                        </td>
+                                        <td class="product_name">Makita Drill Machine</td>
+                                        <td class="product-price">Rs. 4500</td>
+                                        <td class="product_quantity">15</td>
+                                        <td class="product_quantity text-green-500 font-semibold">Active</td>
+                                        <td class="product_total">
+                                            <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Deactivate</button>
+                                            <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 ml-2">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product_thumb">
+                                            <img src="assets/img/products/saw1.jpg" alt="Circular Saw" style="width: 50px; height: 50px;">
+                                        </td>
+                                        <td class="product_name">Bosch Circular Saw</td>
+                                        <td class="product-price">Rs. 6800</td>
+                                        <td class="product_quantity">30</td>
+                                        <td class="product_quantity text-green-500 font-semibold">Active</td>
+                                        <td class="product_total">
+                                            <button class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Deactivate</button>
+                                            <button class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 ml-2">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Load headers -->
+        <script src="assets/js/header.js"></script>
+
+        <script src="assets/js/admin-load-product.js"></script>
+
+        <script src="assets/js/signOut.js"></script>
+
+        <script src="assets/js/notification.js"></script>
+        
+
+    </body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Order History</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+
+        <!-- CSS 
+              ========================= -->
+
+
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+    </head>
+
+    <body class="bg-gray-100 font-sans">
+
+        <!--header area start-->
+        <!--Offcanvas menu area start-->
+        <div class="off_canvars_overlay">
+
+        </div>
+        <div class="Offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+
+                            <div class="middel_right_info">
+                                <a class="text-white fw-bold" onclick="signOut();"> Log Out</a>
+                            </div>
+                            <div id="menu" class="text-left ">
+                                <ul class="offcanvas_main_menu">
+                                    <li class="menu-item-has-children active">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="productview.html">product</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="my-account.html">my account</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="cart.html">Cart</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="checkout.html">Check Out</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="contact.html"> Contact Us </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Offcanvas menu area end-->
+
+        <header>
+            <div class="main_header">
+                <!--header top start-->
+                <div class="header_top" id="mainheader"></div>
+                <!--header top start-->
+                <!--header middel start-->
+                <div class="header_middle" id="middleheader"></div>
+                <!--header middel end-->
+                <!--header bottom satrt-->
+                <div class="main_menu_area" id="bottomheader"></div>
+                <!--header bottom end-->
+            </div>
+        </header>
+        <!--header area end-->
+
+        <!-- Orders List -->
+        <main class="max-w-6xl mx-auto mt-8 p-4">
+            <div id="orders" class="space-y-6">
+
+                <!-- Order Card Template -->
+                <div class="bg-white p-6 rounded-xl shadow-lg fade-in">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+                        <div>
+                            <p class="text-gray-700 font-semibold">Order ID: <span class="text-black">#123456</span></p>
+                            <p class="text-sm text-gray-500">Placed on: 2025-07-30</p>
+                            <p class="mt-2 text-sm text-gray-600">Items: Drone x1, Spare Battery x2</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 text-right">
+                            <p class="font-bold text-lg text-gray-900">Rs. 58,000</p>
+                            <span class="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm mt-2">Delivered</span>
+                            <button
+                                class="ml-4 mt-2 md:mt-0 inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copy above block for each order -->
+
+            </div>
+        </main>
+
+        <script>
+            // Animation Trigger
+            document.addEventListener("DOMContentLoaded", () => {
+                const elements = document.querySelectorAll(".fade-in");
+                elements.forEach((el, i) => {
+                    setTimeout(() => el.classList.add("visible"), i * 100);
+                });
+            });
+        </script>
+
+        <script src="assets/js/header.js"></script>
+
+        <script src="assets/js/orderhistory.js"></script>
+
+    </body>
+
+</html>

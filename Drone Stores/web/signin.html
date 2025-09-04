@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Drone Tech - Sign In</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="stylesheet" href="assets/css/signin.css" />
+    </head>
+    <body class="min-h-screen flex items-center justify-center px-4 text-gray-700 font-sans bg-gray-100">
+
+        <div class="w-full max-w-5xl bg-white/80 backdrop-blur-md p-4 rounded-2xl shadow-lg flex flex-col md:flex-row items-center md:items-stretch animate-fade-in">
+
+            <!-- Left: Sign-in Form -->
+            <div class="w-full md:w-1/2 p-8">
+                <div class="flex flex-col items-center mb-6">
+                    <i class="fas fa-lock text-blue-600 text-4xl mb-2"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Welcome Back Dron Tech</h2>
+                    <p class="text-gray-500 text-sm text-center">Sign in to your Dron Tech account</p>
+                </div>
+
+                <div id="message" class="hidden text-center text-sm mt-4 p-2 rounded-lg"></div>
+
+                <form>
+
+                    <div class="mb-4">
+
+                        <label class="block text-sm font-medium">Email</label>
+
+                        <input type="email" id="email" placeholder="example@mail.com" required
+                               class="w-full mt-1 px-4 py-2 bg-white border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium">Password</label>
+                        <div class="relative">
+                            <input id="password" type="password" placeholder="********" required
+                                   class="w-full mt-1 px-4 py-2 bg-white border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10" />
+                            <span onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-3 flex items-center cursor-pointer text-gray-500 hover:text-blue-600">
+                                <i id="eye-icon" class="fas fa-eye-slash"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="SignIn();"
+                            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all duration-300">Sign
+                        In</button>
+
+                </form>
+
+                <p class="text-sm text-center text-gray-600 mt-4">
+                    Don't have an account?
+                    <a href="signup.html" class="text-blue-600 hover:underline">Create one</a>
+                </p>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="hidden md:flex md:w-1/2 items-center justify-center">
+                <img src="assets/img/about/about3.jpg" alt="Sign In Visual" class="w-full h-full rounded-xl shadow-md" />
+            </div>
+
+        </div>
+
+        <script src="assets/js/signin.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <!-- checkout.html  03:24:27 GMT -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dron Tech - Checkout</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+
+        <!-- CSS 
+        ========================= -->
+        <link rel="stylesheet" href="assets/css/notification.css">
+
+
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+
+    <body onload="loadData();">
+
+        <!--header area start-->
+        <!--Offcanvas menu area start-->
+        <div class="off_canvars_overlay">
+
+        </div>
+        <div class="Offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+                            <div class="support_info">
+                                <p>Any Enquiry: <a href="tel:">+56985475235</a></p>
+                            </div>
+                            <div class="top_right text-right">
+                                <ul>
+                                    <li><a href="my-account.html"> My Account </a></li>
+                                    <li><a href="checkout.html"> Checkout </a></li>
+                                </ul>
+                            </div>
+                            <div class="search_container">
+                                <form action="#">
+                                    <div class="search_box">
+                                        <input placeholder="Search product..." type="text">
+                                        <button type="submit">Search</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="middel_right_info">
+                                <div class="header_wishlist">
+                                    <a href="wishlist.html"><img src="assets/img/user.png" alt=""></a>
+                                </div>
+                                <div class="mini_cart_wrapper">
+                                    <a href="javascript:void(0)"><img src="assets/img/shopping-bag.png" alt=""></a>
+                                    <span class="cart_quantity">2</span>
+                                    <!--mini cart-->
+                                    <div class="mini_cart">
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="assets/img/s-product/product.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Sit voluptatem rhoncus sem lectus</a>
+                                                <p>Qty: 1 X <span> $60.00 </span></p>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="cart_item">
+                                            <div class="cart_img">
+                                                <a href="#"><img src="assets/img/s-product/product2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="cart_info">
+                                                <a href="#">Natus erro at congue massa commodo</a>
+                                                <p>Qty: 1 X <span> $60.00 </span></p>
+                                            </div>
+                                            <div class="cart_remove">
+                                                <a href="#"><i class="ion-android-close"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="mini_cart_table">
+                                            <div class="cart_total">
+                                                <span>Sub total:</span>
+                                                <span class="price">$138.00</span>
+                                            </div>
+                                            <div class="cart_total mt-10">
+                                                <span>total:</span>
+                                                <span class="price">$138.00</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="mini_cart_footer">
+                                            <div class="cart_button">
+                                                <a href="cart.html">View cart</a>
+                                            </div>
+                                            <div class="cart_button">
+                                                <a href="checkout.html">Checkout</a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!--mini cart end-->
+                                </div>
+                            </div>
+                            <div id="menu" class="text-left ">
+                                <ul class="offcanvas_main_menu">
+                                    <li class="menu-item-has-children active">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="product-details.html">product</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">pages </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">contact</a></li>
+                                            <li><a href="privacy-policy.html">privacy policy</a></li>
+                                            <li><a href="faq.html">Frequently Questions</a></li>
+                                            <li><a href="login.html">login</a></li>
+                                            <li><a href="register.html">register</a></li>
+                                            <li><a href="forget-password.html">Forget Password</a></li>
+                                            <li><a href="404.html">Error 404</a></li>
+                                            <li><a href="cart.html">cart</a></li>
+                                            <li><a href="tracking.html">tracking</a></li>
+                                            <li><a href="checkout.html">checkout</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="#">blog</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="blog.html">blog</a></li>
+                                            <li><a href="blog-details.html">blog details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="login.html">my account</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="contact.html"> Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="Offcanvas_footer">
+                                <span><a href="#"><i class="fa fa-envelope-o"></i> info@drophunt.com</a></span>
+                                <ul>
+                                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Offcanvas menu area end-->
+        <header>
+            <div class="main_header">
+                <!--header top start-->
+                <div class="header_top" id="mainheader"></div>
+                <!--header top start-->
+                <!--header middel start-->
+                <div class="header_middle" id="middleheader"></div>
+                <!--header middel end-->
+                <!--header bottom satrt-->
+                <div class="main_menu_area" id="bottomheader"></div>
+                <!--header bottom end-->
+            </div>
+        </header>
+        <!--header area end-->
+
+        <!--breadcrumbs area start-->
+        <div class="breadcrumbs_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="breadcrumb_content">
+                            <ul>
+                                <li><a href="index.html">home</a></li>
+                                <li>Checkout</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--breadcrumbs area end-->
+
+        <!--Checkout page section-->
+        <div class="Checkout_section mt-60">
+            <div class="container">                
+                <div class="checkout_form">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <h3>Billing Details</h3>
+                                <!-- Edit Icon -->
+                                <button title="Edit Details" style="background: none; border: none; cursor: pointer;">
+                                    <a href="my-account.html"> <i class="fa fa-edit" style="font-size: 24px; color: #007bff;"></i></a>
+                                </button>
+                            </div>
+
+                            <ul class="address-details" id="addressUL">
+                                <!--                                <li class="mt--30" id="address1">
+                                                                    <input type="radio" name="address" 
+                                                                           data-name="John Doe" 
+                                                                           data-email="john@example.com"
+                                                                           data-city="Colombo"
+                                                                           data-province="Western"
+                                                                           data-district="Colombo"
+                                                                           data-postalcode="00100"
+                                                                           data-mobileno="0771234567"
+                                                                           />
+                                                                    Address 1: No 123, Galle Rd, Colombo
+                                                                </li>
+                                                                <li class="mt--30" id="address2">
+                                                                    <input type="radio" name="address" 
+                                                                           data-name="Jane Smith" 
+                                                                           data-email="jane@example.com"
+                                                                           data-city="Kandy"
+                                                                           data-province="Central"
+                                                                           data-district="Kandy"
+                                                                           data-postalcode="20000"
+                                                                           data-mobileno="0712345678"
+                                                                           />
+                                                                    Address 2: No 456, Peradeniya Rd, Kandy
+                                                                </li>-->
+                            </ul>  
+                            <h4 id="addName">Name :- Name</h4>
+                            <h4 id="addEmail">Email :- example@email.com</h4> 
+
+                        </div>
+
+                        <div class="col-lg-6 col-md-6">
+                            <form action="#">
+                                <h3>Your order</h3>
+                                <div class="order_table table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!--                                            <tr>
+                                                                                            <td> Handbag fringilla <strong> × 2</strong></td>
+                                                                                            <td> $165.00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td> Handbag justo <strong> × 2</strong></td>
+                                                                                            <td> $50.00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td> Handbag elit <strong> × 2</strong></td>
+                                                                                            <td> $50.00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td> Handbag Rutrum <strong> × 1</strong></td>
+                                                                                            <td> $50.00</td>
+                                                                                        </tr>-->
+                                        </tbody>
+                                        <tfoot>
+                                            <!--                                            <tr>
+                                                                                            <th>Cart Subtotal</th>
+                                                                                            <td>$215.00</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <th>Shipping</th>
+                                                                                            <td><strong>$5.00</strong></td>
+                                                                                        </tr>
+                                                                                        <tr class="order_total">
+                                                                                            <th>Order Total</th>
+                                                                                            <td><strong>$220.00</strong></td>
+                                                                                        </tr>-->
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <div class="payment_method">                                                                        
+                                    <div class="order_button">
+                                        <button type="submit" onclick="checkout();">Proceed to buy</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Checkout page section end-->
+
+        <!--footer area start-->
+        <div id="footer"></div>
+        <!--footer area end-->
+
+        <!-- JS
+    ============================================ -->
+
+        <!--header Js-->
+        <script src="assets/js/header.js"></script>
+
+
+        <!-- Plugins JS -->
+        <script src="assets/js/plugins.js"></script>
+
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+
+        <script src="assets/js/my-account.js "></script>
+
+        <script src="assets/js/checkout.js"></script>
+
+        <script src="assets/js/notification.js"></script>
+
+    </body>
+
+    <!-- checkout.html  03:24:27 GMT -->
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>User Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+
+        <style>
+            .animate-fade-in {
+                animation: fadeIn 0.6s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body class="bg-gray-50 font-sans" onload="loadUsers();">
+
+        <!--header area start-->
+        <!-- Offcanvas Menu Area -->
+        <div class="Offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+                            <div class="middel_right_info">
+                                <button class="text-white fw-bold" onclick="location.href = 'admin-user-management.html'">
+                                    <h4> User Management </h4>
+                                </button>
+                            </div>
+                            <div class="middel_right_info">
+                                <button class="text-white fw-bold" onclick="location.href = 'admin-product-management.html'">
+                                    <h4> Product Management </h4>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!--Offcanvas menu area end-->
+        <header>
+            <div class="main_header">
+                <!--header top start-->
+                <div class="header_top" id="mainheader"></div>
+                <!--header top start-->
+                <!--header middel start-->
+                <div class="header_middle" id="middleheader"></div>
+                <!--header middel end-->
+                <!--header bottom satrt-->
+                <div class="main_menu_area" id="bottomheader"></div>
+                <!--header bottom end-->
+            </div>
+        </header>
+        <!--header area end-->
+
+        <div class="max-w-6xl mt-5 mb-5 mx-auto bg-white p-6 rounded-xl shadow-md animate-fade-in">
+            <h2 class="text-2xl font-bold mb-6">Manage Users</h2>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="table_desc">
+                        <div class="cart_page table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="product_thumb">Email</th>
+                                        <th class="product_name">Name</th>
+                                        <th class="product_quantity">Status</th>
+                                        <th class="product_total">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="user-table-body">
+                                    <!--                                    <tr>
+                                    
+                                                                            <td class="product_name"><a href="#">sahana@gmail.com</a></td>
+                                                                            <td class="product-price">Sahan Gamage</td>
+                                                                            <td class="product_quantity px-4 py-2 border text-green-500">Active</td>
+                                                                            <td class="product_total"><button
+                                                                                    class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Block</button>
+                                                                            </td>
+                                    
+                                                                        </tr>
+                                    
+                                                                        <tr>
+                                                                            <td class="product_name"><a href="#">Nihal@gmail.com</a></td>
+                                                                            <td class="product-price">Nihal Perera</td>
+                                                                            <td class="product_quantity px-4 py-2 border text-red-500">Deactivated</td>
+                                                                            <td class="product_total"><button
+                                                                                    class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600">Active</button>
+                                                                            </td>
+                                                                        </tr>-->
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JS
+    ============================================ -->
+
+        <script src="assets/js/user-managemet.js"></script>
+
+        <script src="assets/js/header.js"></script>
+
+        <script src="assets/js/signOut.js"></script>
+
+
+    </body>
+
+</html>

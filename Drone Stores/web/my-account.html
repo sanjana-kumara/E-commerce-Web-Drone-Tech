@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dron Tech - My Account</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+
+        <link rel="stylesheet" href="assets/css/notification.css">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body class="bg-gray-100" onload="loadProfileToForm();">
+
+        <div class="header_top" id="mainheader"></div>
+        <div class="header_middle" id="middleheader"></div>
+
+        <div class="max-w-4xl mx-auto p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl font-bold">My Profile</h1>
+                <div id="actionButtons">
+                    <button onclick="loadLocationData()" id="editBtn" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" >Edit Profile</button>
+                </div>
+            </div>
+
+            <form id="profileForm" class="space-y-4" onsubmit="return false;">
+                <!-- First Name & Last Name -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-medium">First Name</label>
+                        <input type="text" id="firstName" class="form-input mt-1 w-full p-2 border rounded" disabled
+                               placeholder="Enter your first name" readonly/>
+                    </div>
+                    <div>
+                        <label class="block font-medium">Last Name</label>
+                        <input type="text" id="lastName" class="form-input mt-1 w-full p-2 border rounded" disabled
+                               placeholder="Enter your last name" readonly/>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div>
+                    <label class="block font-medium">Phone</label>
+                    <input type="text" id="mobileNo" class="form-input mt-1 w-full p-2 border rounded" disabled
+                           placeholder="+94 77 123 4567" />
+                </div>
+
+                <!-- Postal Code -->
+                <div>
+                    <label class="block font-medium">Postal Code</label>
+                    <input type="text" id="postalcode" class="form-input mt-1 w-full p-2 border rounded" disabled
+                           placeholder="******" />
+                </div>
+
+                <!-- Address -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block font-medium">Address Line 1</label>
+                        <input type="text" id="address1" class="form-input mt-1 w-full p-2 border rounded" disabled
+                               placeholder="House number or street" />
+                    </div>
+                    <div>
+                        <label class="block font-medium">Address Line 2</label>
+                        <input type="text" id="address2" class="form-input mt-1 w-full p-2 border rounded" disabled
+                               placeholder="Apartment, suite, etc." />
+                    </div>
+                    <div>
+                        <label class="block font-medium">Province</label>
+                        <select id="provinceSelect" onchange="loadDistricts()" class="form-select mt-1 w-full p-2 border rounded" disabled>
+                            <option value="0">-- Select Province --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-medium">District</label>
+                        <select id="districtSelect" onchange="loadCities()" class="form-select mt-1 w-full p-2 border rounded" disabled>
+                            <option value="0">-- Select District --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block font-medium">City</label>
+                        <select id="city" class="form-select mt-1 w-full p-2 border rounded" disabled>
+                            <option value="0">-- Select City --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Save/Cancel Buttons -->
+                <div id="saveCancelButtons" class="flex gap-4 mt-4 hidden">
+                    <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700" onclick="saveProfile();">Save</button>
+                    <button onclick="cancelEdit()" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">Cancel</button>
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <div id="footer"></div>
+
+        <script>
+            const inputs = document.querySelectorAll("#profileForm input, #profileForm textarea, #profileForm select");
+            const editBtn = document.getElementById("editBtn");
+            const saveCancelButtons = document.getElementById("saveCancelButtons");
+            const nameDisplay = document.getElementById("nameDisplay");
+            const uploadImage = document.getElementById("uploadImage");
+            const profileImage = document.getElementById("profileImage");
+            const originalData = {};
+
+            function enableEditing(enable) {
+                inputs.forEach(input => input.disabled = !enable);
+                saveCancelButtons.classList.toggle("hidden", !enable);
+                editBtn.style.display = enable ? "none" : "inline-block";
+            }
+
+            function cacheOriginalValues() {
+                inputs.forEach(input => {
+                    originalData[input.id] = input.value;
+                });
+            }
+
+            function restoreOriginalValues() {
+                inputs.forEach(input => {
+                    input.value = originalData[input.id];
+                });
+            }
+
+            editBtn.addEventListener("click", () => {
+                cacheOriginalValues();
+                enableEditing(true);
+            });
+
+            function cancelEdit() {
+                restoreOriginalValues();
+                enableEditing(false);
+            }
+
+            //            function saveProfile() {
+            //                const firstName = document.getElementById("firstName").value.trim();
+            //                const lastName = document.getElementById("lastName").value.trim();
+            //                nameDisplay.textContent = `${firstName} ${lastName}` || "User Name";
+            //                enableEditing(false);
+            //                alert("Profile updated successfully!");
+            //            }
+            //
+            //            uploadImage.addEventListener("change", (event) => {
+            //                const file = event.target.files[0];
+            //                if (file) {
+            //                    const reader = new FileReader();
+            //                    reader.onload = function (e) {
+            //                        profileImage.src = e.target.result;
+            //                    };
+            //                    reader.readAsDataURL(file);
+            //                }
+            //            });
+        </script>
+
+        <script src="assets/js/header.js"></script>
+
+        <script src="assets/js/my-account.js"></script>
+
+        <script src="assets/js/notification.js"></script>
+
+    </body>
+
+</html>

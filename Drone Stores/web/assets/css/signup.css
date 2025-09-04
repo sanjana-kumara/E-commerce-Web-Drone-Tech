@@ -1,0 +1,37 @@
+body {
+            background: linear-gradient(-45deg, #14532d, #064e3b, #0f766e, #052e16);
+            background-size: 300% 300%;
+            animation: gradientShift 12s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @layer utilities {
+            .animate-slide-up {
+                animation: slideUp 0.8s ease-out both;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(30px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+        }

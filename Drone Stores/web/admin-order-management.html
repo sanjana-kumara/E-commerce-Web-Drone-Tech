@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin | Manage Order Status</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+
+        <link rel="stylesheet" href="assets/css/notification.css"/>
+
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+        <style>
+            .fade-in {
+                opacity: 0;
+                transform: translateY(10px);
+                transition: opacity 0.4s ease, transform 0.4s ease;
+            }
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body class="bg-gray-100 text-gray-800 font-sans">
+
+        <!--header area start-->
+        <!-- Offcanvas Menu Area -->
+        <div class="Offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+                            <div class="middel_right_info">
+                                <button class="text-white fw-bold" onclick="location.href = 'admin-user-management.html'">
+                                    <h4> User Management </h4>
+                                </button>
+                            </div>
+                            <div class="middel_right_info">
+                                <button class="text-white fw-bold" onclick="location.href = 'admin-product-management.html'">
+                                    <h4> Product Management </h4>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!--Offcanvas menu area end-->
+        <header>
+            <div class="main_header">
+                <!--header top start-->
+                <div class="header_top" id="mainheader"></div>
+                <!--header top start-->
+                <!--header middel start-->
+                <div class="header_middle" id="middleheader"></div>
+                <!--header middel end-->
+                <!--header bottom satrt-->
+                <div class="main_menu_area" id="bottomheader"></div>
+                <!--header bottom end-->
+            </div>
+        </header>
+        <!--header area end-->
+
+        <main class="max-w-5xl mx-auto mt-6 p-4">
+            <div class="bg-white rounded-xl shadow p-6 fade-in">
+                <h3 class="text-lg font-semibold mb-4">Order List</h3>
+
+                <!-- Order Row Example -->
+
+                <div id="orderList"><!-- orders will load here dynamically -->
+
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center border-b py-4" >
+                        <div>
+                            <p class="text-sm font-medium">Order ID</p>
+                            <p>#ORD123456</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium">Customer</p>
+                            <p>sanjana@gmail.com</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium">Date</p>
+                            <p>2025-08-01</p>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium">Status</p>
+                            <select class="w-full p-2 border rounded-lg" id="status1">
+                                <!--                                <option>Processing</option>
+                                                                <option>Shipped</option>
+                                                                <option>Delivered</option>
+                                                                <option>Cancelled</option>-->
+                            </select>
+                        </div>
+                        <div>
+                            <button onclick="updateStatus('ORD123456', 'status1')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg w-full">
+                                Update
+                            </button>
+                        </div>
+
+                    </div> 
+
+                </div>
+            </div>
+
+
+            <!-- Repeat this row dynamically -->
+
+        </div>
+    </main>
+
+    <script>
+        // Fade-in animation
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+        });
+        
+    </script>
+
+    <script src="assets/js/notification.js"></script>
+
+    <script src="assets/js/header.js"></script>
+
+    <script src="assets/js/signOut.js"></script>
+
+    <script src="assets/js/admin-order-status.js"></script>
+
+</body>
+
+</html>
+

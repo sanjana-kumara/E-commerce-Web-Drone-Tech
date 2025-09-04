@@ -1,0 +1,327 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <!-- product-details.html  03:24:28 GMT -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Dron Tech - Product Details</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/logo6.png">
+
+        <!-- CSS 
+        ========================= -->
+        <link rel="stylesheet" href="assets/css/notification.css">
+
+
+        <!-- Plugins CSS -->
+        <link rel="stylesheet" href="assets/css/plugins.css">
+
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    </head>
+
+    <body onload="loadProductDetails();">
+
+        <!--header area start-->
+        <!--Offcanvas menu area start-->
+        <div class="off_canvars_overlay">
+
+        </div>
+        <div class="Offcanvas_menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="canvas_open">
+                            <a href="javascript:void(0)"><i class="ion-navicon"></i></a>
+                        </div>
+                        <div class="Offcanvas_menu_wrapper">
+                            <div class="canvas_close">
+                                <a href="javascript:void(0)"><i class="ion-android-close"></i></a>
+                            </div>
+
+                            <div class="middel_right_info">
+                                <a class="text-white fw-bold" onclick="signOut();"> Log Out</a>
+                            </div>
+                            <div id="menu" class="text-left ">
+                                <ul class="offcanvas_main_menu">
+                                    <li class="menu-item-has-children active">
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="productview.html">product</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="my-account.html">my account</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="cart.html">Cart</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="orderhistory.html">Orders</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="checkout.html">Check Out</a>
+                                    </li>
+                                    <li class="menu-item-has-children">
+                                        <a href="contact.html"> Contact Us </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Offcanvas menu area end-->
+
+        <header>
+            <div class="main_header">
+                <!--header top start-->
+                <div class="header_top" id="mainheader"></div>
+                <!--header top start-->
+                <!--header middel start-->
+                <div class="header_middle" id="middleheader"></div>
+                <!--header middel end-->
+                <!--header bottom satrt-->
+                <div class="main_menu_area" id="bottomheader"></div>
+                <!--header bottom end-->
+            </div>
+        </header>
+        <!--header area end-->
+
+        <!--breadcrumbs area start-->
+        <div class="breadcrumbs_area" id="breadscrumb">
+
+        </div>
+        <!--breadcrumbs area end-->
+
+        <!--product details start-->
+        <div class="product_details mt-60 mb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product-details-tab">
+                            <div id="img-1" class="zoomWrapper single-zoom">
+                                <a href="#">
+                                    <img id="zoom1" src=""
+                                         data-zoom-image="" alt="big-1">
+                                </a>
+                            </div>
+                            <div class="single-zoom-thumb">
+                                <ul class="s-tab-zoom owl-carousel single-product-active" id="gallery_01">
+                                    <!--                                    <li>
+                                                                            <a href="#" class="elevatezoom-gallery active" data-update=""
+                                                                               data-image="assets/img/product/details-2.jpg"
+                                                                               data-zoom-image="assets/img/product/details-2.jpg">
+                                                                                <img src="assets/img/product/details-2.jpg" alt="zo-th-1" />
+                                                                            </a>
+                                    
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="elevatezoom-gallery active" data-update=""
+                                                                               data-image="assets/img/product/details-3.jpg"
+                                                                               data-zoom-image="assets/img/product/details-3.jpg">
+                                                                                <img src="assets/img/product/details-3.jpg" alt="zo-th-1" />
+                                                                            </a>
+                                    
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="elevatezoom-gallery active" data-update=""
+                                                                               data-image="assets/img/product/details-4.jpg"
+                                                                               data-zoom-image="assets/img/product/details-4.jpg">
+                                                                                <img src="assets/img/product/details-4.jpg" alt="zo-th-1" />
+                                                                            </a>
+                                    
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="elevatezoom-gallery active" data-update=""
+                                                                               data-image="assets/img/product/details-1.jpg"
+                                                                               data-zoom-image="assets/img/product/details-1.jpg">
+                                                                                <img src="assets/img/product/details-1.jpg" alt="zo-th-1" />
+                                                                            </a>
+                                    
+                                                                        </li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="product_d_right">
+                            <form action="#">
+
+                                <h1>DJI Phantom Air X</h1>
+                                <div class=" product_ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li class="review"><a href="#"> (250 reviews) </a></li>
+                                    </ul>
+
+                                </div>
+                                <div class="price_box">
+                                    <span class="current_price">RS.70,000.00</span>
+                                    <!--<span class="old_price">$80.00</span>-->
+
+                                </div>
+                                <div class="product_desc">
+                                    <ul>
+                                        <li>Title</li>
+                                        <li>Brand</li>
+                                        <li>Model</li>
+                                        <li>In Stock</li>
+                                        <!--                                        <li>Free delivery available*</li>
+                                                                                <li>Sale 30% Off Use Code : 'Drone Tech'</li>-->
+                                    </ul>
+
+                                </div>
+
+                                <div class="product_variant color">
+                                    <h3>Available Options</h3>
+                                    <label>color</label>
+                                    <ul id="colorOptions">
+                                        <li class="bg-danger rounded-circle"><a href="#"></a></li>
+                                        <li class="bg-dark rounded-circle"><a href="#"></a></li>
+                                        <li class="bg-white rounded-circle"><a href="#"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product_variant quantity">
+                                    <!-- Hidden input for product ID -->
+                                    <input type="hidden" id="productId" />
+
+                                    <!-- Quantity and Add to Cart button -->
+                                    <label for="qtyInput">Quantity</label>
+                                    <input id="qtyInput" type="number" min="1" value="1" class="border px-2 py-1 w-20 rounded" />
+
+                                    <button id="addToCartBtn" class="button" type="button" onclick="addToCart(event)">Add to Cart</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--product details end-->
+
+        <!--product info start-->
+        <div class="product_d_info mb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product_d_inner">
+                            <div class="product_info_button">
+                                <ul class="nav" role="tablist">
+                                    <li>
+                                        <a class="active" data-toggle="tab" href="#info" role="tab" aria-controls="info"
+                                           aria-selected="false">Description</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#sheet" role="tab" aria-controls="sheet"
+                                           aria-selected="false">Specification</a>
+                                    </li>
+                                    <!-- <li>
+                                        <a data-toggle="tab" href="#reviews" role="tab" aria-controls="reviews"
+                                            aria-selected="false">Reviews (1)</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="info" role="tabpanel">
+                                    <div class="product_info_content">
+                                        <p>High performance drone for pros.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="sheet" role="tabpanel">
+                                    <div class="product_d_table">
+                                        <form action="#">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="first_child">Tittle</td>
+                                                        <td>Phantom Air X</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">Brand</td>
+                                                        <td>DJI</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">Model</td>
+                                                        <td>Mini 2 SE</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">Filght Time</td>
+                                                        <td>30 mins</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">Range</td>
+                                                        <td>10 km</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">Features</td>
+                                                        <td>4K Camera, GPS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="first_child">Warranty</td>
+                                                        <td>1 Year</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--product info end-->
+
+
+        <!--footer area start-->
+        <div id="footer"></div>
+        <!--footer area end-->
+
+        <!-- JS
+    ============================================ -->
+
+        <!--header Js-->
+        <script src="assets/js/header.js"></script>
+
+        <!-- Plugins JS -->
+        <script src="assets/js/plugins.js"></script>
+
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+
+        <!-- Product Deatails JS -->
+        <script src="assets/js/product-deatails.js"></script>
+
+        <script src="assets/js/admin-load-product.js"></script>
+
+        <script src="assets/js/notification.js"></script>
+
+        <!--add to cart Js-->        
+        <script src="assets/js/add-to-cart.js"></script>
+
+
+
+    </body>
+
+
+    <!-- product-details.html  03:24:28 GMT -->
+
+</html>
