@@ -101,6 +101,11 @@ From the file structure, the system includes:
 - **Payment Integration**: PayHere (via `PayHere.java`)
 
 ---
+## User Wireframe
+![Slide1](https://github.com/user-attachments/assets/69d4b849-2bab-4f5c-ba20-4c62e0189abf)
+
+## Admin Wireframe
+![Slide2](https://github.com/user-attachments/assets/9f2e7741-7c23-4f03-9e1a-bc576b8f14fe)
 
 ## 🙋‍♂️ Author
 
